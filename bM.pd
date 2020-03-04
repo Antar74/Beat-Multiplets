@@ -1,0 +1,111 @@
+#N canvas 358 23 769 695 12;
+#X obj 230 331 metro;
+#X floatatom 262 238 5 0 0 0 - - -;
+#X floatatom 316 238 5 0 0 0 - - -;
+#X floatatom 370 238 5 0 0 0 - - -;
+#X floatatom 423 238 5 0 0 0 - - -;
+#X floatatom 262 288 5 0 0 0 - - -;
+#X floatatom 316 288 5 0 0 0 - - -;
+#X floatatom 370 288 5 0 0 0 - - -;
+#X floatatom 423 288 5 0 0 0 - - -;
+#X obj 418 186 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 436 186 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 455 186 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 473 186 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 230 363 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 143 312 0;
+#X obj 475 378 + 1;
+#X obj 421 427 + 1;
+#X msg 475 349 0;
+#X obj 421 378 i;
+#X obj 421 404 %;
+#X floatatom 562 386 2 0 0 0 - - -;
+#X msg 690 238 4;
+#X obj 262 261 * 1;
+#X obj 316 261 / 2;
+#X obj 370 261 / 3;
+#X obj 423 261 / 4;
+#X msg 646 238 3;
+#X msg 606 238 2;
+#X msg 562 238 1;
+#X floatatom 495 446 5 0 0 0 - - -;
+#X obj 544 464 ==;
+#X floatatom 614 483 5 0 0 0 - - -;
+#X obj 614 515 sel 1;
+#X obj 475 319 r iniciar;
+#X obj 143 534 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 418 159 sel 0 1 2 3;
+#X obj 262 124 inlet;
+#X obj 418 124 inlet;
+#X text 305 125 actual MS;
+#X text 467 124 # added beats;
+#X obj 230 402 outlet;
+#X obj 230 79 inlet;
+#X text 282 401 new pulse;
+#X text 302 32 >>> BEAT MULTIPLETS <<<;
+#X text 273 79 pulse;
+#X text 663 516 stop;
+#X text 175 574 About: takes in a metronome bang and divides it by
+2 \, 3 or 4 to make tuplets (duplets \, triplets \, quadruplets).,
+f 61;
+#X text 174 655 Beat Multiplets by Perkinson 2020 (perklapoint@gmail.com)
+;
+#X text 174 612 v0 - needs a pulse and a millisecond setting independently
+(actual MS). I will try to eliminate this asap.;
+#X connect 0 0 13 0;
+#X connect 1 0 22 0;
+#X connect 2 0 23 0;
+#X connect 3 0 24 0;
+#X connect 4 0 25 0;
+#X connect 5 0 0 1;
+#X connect 6 0 0 1;
+#X connect 7 0 0 1;
+#X connect 8 0 0 1;
+#X connect 9 0 28 0;
+#X connect 9 0 1 0;
+#X connect 10 0 2 0;
+#X connect 10 0 27 0;
+#X connect 11 0 3 0;
+#X connect 11 0 26 0;
+#X connect 12 0 4 0;
+#X connect 12 0 21 0;
+#X connect 13 0 18 0;
+#X connect 13 0 40 0;
+#X connect 14 0 0 0;
+#X connect 15 0 18 1;
+#X connect 16 0 29 0;
+#X connect 17 0 18 1;
+#X connect 18 0 15 0;
+#X connect 18 0 19 0;
+#X connect 19 0 16 0;
+#X connect 20 0 19 1;
+#X connect 20 0 30 1;
+#X connect 21 0 20 0;
+#X connect 22 0 5 0;
+#X connect 23 0 6 0;
+#X connect 24 0 7 0;
+#X connect 25 0 8 0;
+#X connect 26 0 20 0;
+#X connect 27 0 20 0;
+#X connect 28 0 20 0;
+#X connect 29 0 30 0;
+#X connect 30 0 31 0;
+#X connect 31 0 32 0;
+#X connect 32 0 34 0;
+#X connect 34 0 14 0;
+#X connect 35 0 9 0;
+#X connect 35 1 10 0;
+#X connect 35 2 11 0;
+#X connect 35 3 12 0;
+#X connect 36 0 1 0;
+#X connect 36 0 2 0;
+#X connect 36 0 3 0;
+#X connect 36 0 4 0;
+#X connect 37 0 35 0;
+#X connect 41 0 0 0;
